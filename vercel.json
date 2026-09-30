@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/colinha", "destination": "/colinha.html" },
+    { "source": "/colinha/", "destination": "/colinha.html" }
+  ]
+}

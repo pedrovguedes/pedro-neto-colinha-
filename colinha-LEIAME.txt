@@ -1,0 +1,39 @@
+COLINHA DO PEDRO NETO 70022 · pedronetogrupos.com/colinha
+=========================================================
+
+COMO SUBIR NA VERCEL
+Coloque todos estes arquivos soltos na raiz do projeto do site (junto do index.html
+que já existe) e faça o deploy. Não precisa criar pasta.
+
+  colinha.html               página da colinha
+  colinha-privacidade.html   política de privacidade da colinha (LGPD)
+  colinha-app.js             funcionamento da colinha
+  colinha-config.js          domínio, e-mail e Instagram
+  colinha-style.css          visual (fontes já embutidas)
+  colinha-candidatos.json    candidatos do TSE (RJ + presidente)
+  colinha-capa.jpg           capa do Pedro Neto
+  colinha-pedro-neto.jpg     foto usada na colinha
+  vercel.json                faz /colinha abrir a colinha.html
+
+Endereços depois do deploy:
+  https://www.pedronetogrupos.com/colinha
+  https://www.pedronetogrupos.com/colinha-privacidade.html
+
+ATENÇÃO COM O vercel.json
+Se o projeto JÁ TIVER um vercel.json, não substitua. Abra o que existe e acrescente
+estas duas linhas dentro de "rewrites" (crie "rewrites" se não houver):
+
+  { "source": "/colinha", "destination": "/colinha.html" },
+  { "source": "/colinha/", "destination": "/colinha.html" }
+
+Sem isso, a colinha só abre em /colinha.html.
+
+ATUALIZAR A BASE DO TSE (opcional, recomendado)
+A lista de deputados é de 09/08/2026. Para atualizar direto do TSE, com o Node 18+
+instalado, rode na pasta dos arquivos:
+
+  node colinha-coletar-tse.mjs
+
+Isso gera um colinha-candidatos.json novo. Suba esse arquivo de novo.
+O colinha-coletar-tse.mjs e este LEIAME não precisam ir para o site
+(se forem, não atrapalham).
