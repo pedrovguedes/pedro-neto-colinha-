@@ -19,7 +19,7 @@
     UF: 'RJ',
     ANO: 2026,
     ELEICAO: '20322002026',               // id da "Eleição Geral Federal 2026" no DivulgaCandContas
-    DADOS_URL: '/colinha-candidatos.json',
+    DADOS_URL: 'colinha-candidatos.json',
     API_AO_VIVO: '',                      // opcional: endpoint próprio que devolve a lista do TSE já compactada
     DESTAQUE: {
       cargo: '7',
@@ -27,7 +27,7 @@
       nome: 'Pedro Neto',
       partido: 'AVANTE',
       id: '190002538606',
-      foto: '/colinha-pedro-neto.jpg',
+      foto: 'colinha-pedro-neto.jpg',
       cnpj: '68.430.427/0001-63',
     },
   };
